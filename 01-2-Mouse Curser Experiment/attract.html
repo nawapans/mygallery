@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0 ">
+        <meta http-equiv="X-UA-Compatible " content="ie=edge ">
+        <title>
+            First assignment
+        </title>
+        <link rel="stylesheet " type="text/css " href="style2.css ">
+        
+
+    </head>
+    <script type="text/javascript ">
+        window.addEventListener('mousemove', function (r) {
+        document.getElementById('x-value').textContent = r.x;
+        document.getElementById('y-value').textContent = r.y;
+        });
+    </script>
+    
+
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js "></script>
+        <script src="script.js "></script>
+
+        <h1>Move your mouse to calculate distance between the center of the element and the mouse cursor.</h1>
+
+        <p id="distance "> Distance from center to mouse cursor: <span>00</span>px</p>
+
+        <p><h3>Mouse cursor coordinate : </h3></p>
+
+
+        <p><h2>
+        <p>
+            X: <span id="x-value "></span>
+        </p>
+         <p>
+            Y: <span id="y-value "></span>
+         </p>
+        </h2>
+        </p>
+
+
+        <div id="element "></div>
+    </body>
+
+
+</html>
