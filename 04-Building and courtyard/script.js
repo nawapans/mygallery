@@ -7,21 +7,7 @@ import { RhinoCompute } from 'https://cdn.jsdelivr.net/npm/compute-rhino3d@0.13.
 // reference the definition
 const definitionName = 'building-and-courtyard.gh'
 
-// listen for slider change events
-const Z1_slider = document.getElementById('RH_IN:Corner_1')
-Z1_slider.addEventListener('mouseup', onSliderChange, false)
 
-const Z2_slider = document.getElementById('RH_IN:Corner_2')
-Z2_slider.addEventListener('mouseup', onSliderChange, false)
-
-const Z3_slider = document.getElementById('RH_IN:Corner_3')
-Z3_slider.addEventListener('mouseup', onSliderChange, false)
-
-const Z4_slider = document.getElementById('RH_IN:Corner_4')
-Z4_slider.addEventListener('mouseup', onSliderChange, false)
-
-const UV_slider = document.getElementById('RH_IN:Height')
-UV_slider.addEventListener('mouseup', onSliderChange, false)
 
 //const radius_slider = document.getElementById('radius')
 //radius_slider.addEventListener('input', onSliderChange, false)
@@ -39,6 +25,21 @@ loader.setLibraryPath('https://cdn.jsdelivr.net/npm/rhino3dm@0.15.0-beta/')
 
 window.addEventListener('click', onclick, false)
 
+// listen for slider change events
+const Z1_slider = document.getElementById('RH_IN:Corner_1')
+Z1_slider.addEventListener('mouseup', onSliderChange, false)
+
+const Z2_slider = document.getElementById('RH_IN:Corner_2')
+Z2_slider.addEventListener('mouseup', onSliderChange, false)
+
+const Z3_slider = document.getElementById('RH_IN:Corner_3')
+Z3_slider.addEventListener('mouseup', onSliderChange, false)
+
+const Z4_slider = document.getElementById('RH_IN:Corner_4')
+Z4_slider.addEventListener('mouseup', onSliderChange, false)
+
+const UV_slider = document.getElementById('RH_IN:Height')
+UV_slider.addEventListener('mouseup', onSliderChange, false)
 
 // create a few variables to store a reference to the rhino3dm library and to the loaded definition
 let rhino, definition, doc
@@ -50,8 +51,8 @@ rhino3dm().then(async m => {
     //RhinoCompute.url = 'http://localhost:8081/' // Rhino.Compute server url
 
     // remote
-    RhinoCompute.url = 'https://macad2021.compute.rhino3d.com/'
-    RhinoCompute.apiKey = getApiKey() // needed when calling a remote RhinoCompute server
+    //RhinoCompute.url = 'https://macad2021.compute.rhino3d.com/'
+    //RhinoCompute.apiKey = getApiKey() // needed when calling a remote RhinoCompute server
 
     //source a .gh/.ghx file in the same directory
     let url = definitionName
